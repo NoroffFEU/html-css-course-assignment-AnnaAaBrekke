@@ -275,6 +275,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: white;
+
 }
 
 .left.footer {
@@ -738,16 +739,77 @@ body {
 
 /* Contact us page */
 
+.contact noscnoript {
+  background: linear-gradient(to top, rgb(71,71,71), rgb(128, 106, 89)); 
+}
+
+.SeLogo-Contact {
+  height: auto;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 33,33;
+  z-index: -1;
+  margin-top: 4rem;
+}
+
+
 .contact-container {
-  padding: 1rem;
+  padding: 3rem;
   background-color: grey;
+  width: 500px; /* Full width */  
+  margin-top: 12rem; /* Add a top margin */
+  margin-bottom: 1rem; /* Bottom margin */
   display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  text-align: center;
+}
+
+.contact-container h1 {
+  text-align: center;
+  font-weight: 300;
 }
 
 .left-contact {
+  background-color: blue;
+  border-radius: 5px;
   display: grid;
-  grid: flex;
-  
+  grid: 25 25 25 25;
+  align-items: center;
+}
+
+.contact-container p {
+  font-weight: 200;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.right-contact {
+  background-color: pink;
+  border: 0.25rem solid;
+  border-color: white;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.contact-message {
+  position: relative;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.message {
+  height: 150px;
+}
+
+.send {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 15%; /* Make the button the same height as the input */
+  width: 100%;
+  border-radius: 10px;
 }
 
 
