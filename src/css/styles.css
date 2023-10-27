@@ -378,6 +378,7 @@ body {
   background-position: 100% 50%;
   color: #000000;
   backface-visibility: hidden;
+  height: 250px;
 }
 
 .top-section-list h1 {
@@ -442,25 +443,30 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
   padding: 1rem;
+  border: 2px solid black;
+  box-shadow: outside #000000;
+  background: linear-gradient(to bottom,black, rgb(128, 106, 89));
 }
 
 .Action,
 .Drama,
 .Comedy,
 .Horror {
+  padding: 1rem;
+  text-align: start;
  }
 
 .action-movies img,
 .comedy-movies img,
 .drama-movies img,
 .horror-movies img {
-  background-color: blue;
-  padding: 1rem;
   flex: 1 1 350px;
   min-height: 400px;
   max-width: 100%;
   width: 270px;
   object-fit: cover;
+  justify-content: center;
+  border-radius: 6px;
 }
 
 .action-movies i,
@@ -468,11 +474,13 @@ body {
 .drama-movies i,
 .horror-movies i {
   position: absolute;
-  background-color: brown;
+  background-color: grey;
   padding: 1rem;
-  justify-content: center;
   text-align: center;
-  align-items: center
+  right: 10%;
+  top: 50%;
+  bottom: 50%;
+  border-radius: 360px;
 }
 
 /* Movie Page */
@@ -485,6 +493,16 @@ body {
   padding: 1rem;
 }
 
+.trailer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #000000;s
+}
 
 /* Media query for smaller screens (e.g., mobile) */
 @media (max-width: 1440px) {
@@ -525,7 +543,7 @@ body {
 
 @media (max-width: 1440px) {
   .movie-page img {
-    filter: opacity(40%);
+    filter: opacity(30%);
     height: 500px;
     width: 100%;
     object-fit: cover;
@@ -535,12 +553,14 @@ body {
 /* Media query for larger screens (e.g., desktop) */
 @media (min-width: 600px) {
   .movie-page img {
-    filter: opacity(40%);
+    filter: opacity(30%);
     height: 500px;
     width: 1440px;
     object-fit: cover;
   }
 }
+
+
 
 .movie-cover-index {
   display: flex;
@@ -582,7 +602,12 @@ body {
 }
 
 .you-might {
-  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .imgBatmanHomeMoviePage,
@@ -761,8 +786,9 @@ body {
 
 /* Contact us page */
 
-.contact noscnoript {
+.contact {
   background: linear-gradient(to top, rgb(71,71,71), rgb(128, 106, 89)); 
+  display: flex;
 }
 
 .SeLogo-Contact {
@@ -779,9 +805,12 @@ body {
 .contact-container {
   padding: 3rem;
   background-color: grey;
-  width: 500px; /* Full width */  
-  margin-top: 12rem; /* Add a top margin */
-  margin-bottom: 1rem; /* Bottom margin */
+  width: 100%; 
+  height: auto;
+  margin-top: 12rem; 
+  margin-bottom: 1rem; 
+  margin-left: 1rem;
+  margin-right: 1rem;
   display: flex;
   gap: 1rem;
   flex-direction: row;
@@ -834,7 +863,27 @@ body {
   border-radius: 10px;
 }
 
+.contact-info-boxes {
+  display: flex;
+  align-items: center; 
+  flex: 1 1 270px;
+  gap: 1rem;
+  padding: 1rem;
+}
 
+.our-email-box,
+.our-phone-box,
+.our-adress-box {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: outside #000000;
+  background-color: white;
+  color: black;
+  width: 270px;
+  height: 210px;
+  justify-content: space-around;
+}
 
 .typical-QA {
   text-align: center;
