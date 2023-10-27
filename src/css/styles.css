@@ -432,25 +432,47 @@ body {
   font-weight: 500;
 }
 
-.Action,
-.Drama,
-.Comedy,
-.Horror {
-  margin-left: 1rem;
-}
-
 .action-movies,
 .comedy-movies,
 .drama-movies,
 .horror-movies {
+  position: relative;
+  z-index: 1;
   display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  list-style: none;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
-.fa-solid.fa-ellipsis.fa-2xl {
-  justify-content: end;
+.Action,
+.Drama,
+.Comedy,
+.Horror {
+ }
+
+.action-movies img,
+.comedy-movies img,
+.drama-movies img,
+.horror-movies img {
+  background-color: blue;
+  padding: 1rem;
+  flex: 1 1 350px;
+  min-height: 400px;
+  max-width: 100%;
+  width: 270px;
+  object-fit: cover;
+}
+
+.action-movies i,
+.comedy-movies i,
+.drama-movies i,
+.horror-movies i {
+  position: absolute;
+  background-color: brown;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center
 }
 
 /* Movie Page */
