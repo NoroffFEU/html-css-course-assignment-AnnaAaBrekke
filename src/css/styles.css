@@ -4,16 +4,791 @@
 /* These are marked with an underscore: */
 @import url("./_variables.css");
 /* Feel free to add as many of these imports as you need */
+@media (min-width: 600px) and (max-width: 1440px) {}
 
-body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+*, *:before *:after {
+  box-sizing: inherit;
 }
 
-.centered {
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Home */
+
+.bar {
+  background-color: rgb(31,38,39);
+  background: linear-gradient(to bottom, rgb(31,38,39), rgb(99, 99, 99));
+  padding: 0.2rem;
+  border: 2px black;
+  border-radius: 2px;
   display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.left.bar ul{
+  display: flex; 
+  align-items: center;
+}
+
+.fa-solid.fa-bars.fa-xl {
+  margin-right: 10px; 
+}  
+
+
+.SELogoBar {
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+  filter: brightness(15%);
+  max-width: 100%;
+}
+
+
+.right.bar ul {
+  display: flex;
+  align-items: center;
+}
+
+.fa-solid.fa-film.fa-xl,
+.fa-regular.fa-user.fa-xl,
+.fa-solid.fa-cart-shopping.fa-xl {
+  margin-right: 10px;
+}
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 600px) {
+  .home {
+    height: 100%;
+    background-image: url(/assets/images/background1.jpg);
+    background-size: contain;
+    background-position: 80%;
+    backface-visibility: hidden;
+    aspect-ratio: auto 2792/1861;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 1440px) {
+  .home {
+    height: 100%;
+    background-image: url(/assets/images/background1.jpg);
+    background-size: cover;
+    background-position: 30%;
+    backface-visibility: hidden;
+    aspect-ratio: auto 2792/1861;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/assets/images/background1.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  z-index: -1; /* Place this pseudo-element behind the content */
+}
+
+
+.SELogoHome {
+  height: auto;
+  width: 600px;
+  margin:10px;
+  filter: brightness(60%);
   justify-content: center;
+  padding: 1rem;
+  max-width: 100%;
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.home-text {
+  text-align: center;
+  margin: 10px;
+  margin-right: 50%;
+  padding: 1rem;
+  filter: drop-shadow(black);
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.watch.online {
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  margin: 30px;
+  margin-right: 50%;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: black;
+  color: #FFFFFF;
+  border: 5px black;
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.steps {
+  height: auto;
+  background-image: url(/assets/images/background2.jpg);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: auto 6205/4137;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.steps ul {
+  text-align: center;
+  margin: 10px;
+}
+
+.Step1,
+.Step2,
+.Step3 {
+  background-color: rgb(68, 40, 28);
+  background: linear-gradient(to right, rgb(68, 40, 28), rgb(218, 158, 115),rgb(68, 40, 28));
+  color: black;
+  text-align: center;
+  margin: 5px;
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  border: 10px black;
+  border-radius: 25%;
+  box-shadow: 5px 5px 10px;
+  filter: drop-shadow(black);
+
+}
+
+.searchfield {
+  background-color: #FFFFFF;
+  opacity: 45%;
+  text-align: start;
+  margin: 20px;
+  width: 600px;
+  height: 40px;
+  border: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  max-width: 100%;
+}
+
+.latest.editions {
+  display: flex;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.check.text {
+  display: flex;
   text-align: center;
+  filter: drop-shadow(black);
+}
+
+.halloween {
+  display: flex;
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 40rem;
+} 
+
+.halloween.text {
+  font-size: 30px;
+  filter: drop-shadow(black);
+  padding: 1rem;
+}
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 600px) {
+  .halloween {
+    margin-top: 10rem; /* Adjust the margin for larger screens */
+    margin-bottom: 0%;
+  }
+  .discover {
+    margin-bottom: 0%;
+  }
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 1440px) {
+  .halloween {
+    margin-top: 40rem; /* No margin for smaller screens to prevent overlapping */
+  }
+}
+
+
+.discover {
+  font-size: 30px;
+  text-align: center;
+  text-decoration-style: initial;
+  color: #FFFFFF;
+  filter: drop-shadow(black);
+}
+
+.footer {
+  height: 1%;
+  background-color: #55555;
+  padding: 10px 0;
+  margin: 0 auto;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.left.footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.footer.icons {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.fa-brands.fa-tiktok.fa-lg {
+  margin-right: 5px;
+}
+
+.fa-brands.fa-square-instagram.fa-lg {
+  margin-right: 5px;
+}
+
+.fa-brands.fa-twitter.fa-lg {
+  margin-right: 5px;
+}
+
+.copyright {
+  font-size: xx-small;
+  margin-left: 50px;
+}
+
+.right.footer {
+  display: flex;
+  align-items: center;
+}
+
+.SELogoFooter {
+  height: auto;
+  width: 300px;
+  justify-content: flex-end;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+/* Images at home */
+
+.latest.editions.images {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px
+}
+
+.imgOnceUponHome,
+.imgBatmanHome,
+.imgHobbsHome,
+.imgSweetHome {
+  height: 300px;
+  max-width: 310px;
+  object-fit: cover;
+  object-position: bottom;
+  margin: 10px; /* Add horizontal spacing between images */
+  padding: 5px;
+  border-radius: 5px;
+  flex: 0 0;
+}
+
+.halloween.images {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px
+}
+
+
+.imgScreamHome,
+.imgAddamsHome,
+.imgBatmanHome2,
+.imgGodzillaHome {
+  height: 300px;
+  max-width: 310px;
+  object-fit: cover;
+  object-position: bottom;
+  margin: 10px; /* Add horizontal spacing between images */
+  padding: 5px;
+  border-radius: 5px;
+  flex: 0 0;
+}
+
+/* List of movies */
+
+.top-section-list {
+  background-image: url(/assets/images/search_background.jpg);
+  background-size: cover;
+  background-position: 100% 50%;
+  color: #000000;
+  backface-visibility: hidden;
+}
+
+.top-section-list h1 {
+  font-size: 50px;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  filter: drop-shadow(black);
+  backface-visibility: hidden;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.top-section-list h2 {
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 1rem;
+  margin-top: 0;  
+  filter: drop-shadow(black);
+  backface-visibility: hidden;
+}
+
+.searchfield2 {
+  background-color: rgb(213, 213, 213);
+  opacity: 100%;
+  text-align: start;
+  width: 450px;
+  height: 40px;
+  border: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  max-width: 100%;
+  z-index: -1;
+  margin-left: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.genres {
+  background: linear-gradient(to bottom, rgb(102,82,67, 100%),rgb(135,81,41, 0%));
+  color:#FFFFFF;
+  border-radius: 4px;
+}
+
+.genres ul {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  list-style: none;
+  padding: 0.5rem;
+  gap: 2rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.Action,
+.Drama,
+.Comedy,
+.Horror {
+  margin-left: 1rem;
+}
+
+.action-movies,
+.comedy-movies,
+.drama-movies,
+.horror-movies {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  list-style: none;
+}
+
+.fa-solid.fa-ellipsis.fa-2xl {
+  justify-content: end;
+}
+
+/* Movie Page */
+
+.movie-page {
+  background: linear-gradient(to bottom, rgb(71,71,71),rgb(71,71,71), rgb(128, 106, 89));}
+
+.movie-page-cover {
+  font-size: 26px;
+  padding: 1rem;
+}
+
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 1440px) {
+  .movie-title {
+    position: absolute;
+    top: 7rem;  
+    left: 1rem;
+    width: 100%;
+    height: 100%;
+    color: white; /* Set the text color */
+    text-align: left; /* Center the text horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 600px) {
+  .movie-title {
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+    width: 1440px;
+    height: 600px;
+    color: white; /* Set the text color */
+    text-align: left; /* Center the text horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .movie-page img {
+    filter: opacity(40%);
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 600px) {
+  .movie-page img {
+    filter: opacity(40%);
+    height: 500px;
+    width: 1440px;
+    object-fit: cover;
+  }
+}
+
+.movie-cover-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1.5rem;
+}
+
+.price {
+  width: 100%;
+  height: 3rem;
+  padding: 0; /* Remove excessive padding */
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: darkolivegreen;
+  color: #FFFFFF;
+  border: 5px black;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+}
+
+.about-this {
+  padding: 1.5rem;
+  font-size: 24px;
+}
+
+.info-movie {
+  padding: 1.5rem;
+  font-size: 16px;
+}
+
+.quentin,
+.leo,
+.hour,
+.number {
+  font-weight: 100;
+}
+
+.you-might {
+  padding: 1.5rem;
+}
+
+.imgBatmanHomeMoviePage,
+.imgHobbsHomeMoviePage,
+.imgSweetHomeMoviePage {
+  height: 200px;
+  max-width: 310px;
+  margin: 0.25rem; /* Add horizontal spacing between images */
+  border-radius: 5px;
+}
+
+
+/* Check out page */
+
+.checkout-home {
+  background: linear-gradient(to bottom, rgb(71,71,71), rgb(128, 106, 89));
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.where-you-are {
+  width: 90%;
+  max-width: 100%;
+  height: 50px; /* Set the height of the box */
+  background-color: #D9D9D9; /* Set the background color */
+  border: 2px solid #000000 50%; /* Add a border */
+  border-radius: 1rem; /* Round the corners */
+}
+
+.inside-checkout-bar {
+  display: flex;
+  justify-content: center;
+}
+
+  .button-cart {
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 100%;
+    height: 50px; 
+    background-color: #D9D9D9; 
+    border: 2px solid #000000 50%; 
+    border-radius: 1rem; 
+    text-align: start;
+    padding-left: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .imgOnceUpon-check {
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    border: #000000;
+ }
+
+  .checkout-cart {
+    margin-top: 0.5rem;
+    width: 90%;
+    max-width: 100%;
+    height: 800px; 
+    background-color: #D9D9D9; 
+    border: 2px solid #000000 50%; 
+    border-radius: 1rem; 
+    text-align: start;
+    padding-left: 1rem;
+    font-size: 20px;
+  }
+
+  .once-cart {
+    font-weight: bold;
+  }
+
+  .remove {
+    text-decoration: underline;
+    text-align: end;
+  }
+
+
+  .button-total {
+    margin-top: 0.5rem;
+    width: 90%;
+    max-width: 100%;
+    height: 50px; 
+    background-color: #D9D9D9; 
+    border: 2px solid #000000 50%; 
+    border-radius: 1rem; 
+    text-align: start;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .button-total li {
+    list-style: none;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .next-page {
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    padding: 5rem;
+  }
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 900px) {
+  .next-page {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    font-size: 140px;
+  }
+}
+
+/* Checkout Successfull page */
+
+.checkoutsuccess-home {
+  background: linear-gradient(to bottom, rgb(71,71,71), rgb(128, 106, 89));
+  text-align: center;
+  align-items: center;
+}
+
+.checkout-cart {
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  max-width: 100%;
+  height: 600px; 
+  background-color: #D9D9D9; 
+  border: 2px solid #000000 50%; 
+  border-radius: 1rem; 
+  text-align: start;
+  font-size: 20px;
+}
+
+.check-icon {
+  text-align: center;
+  align-items: center;
+}
+
+.successfull-container h1 {
+  text-align: center;
+}
+
+.successfull-container p {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+.watch-now {
+  background-color: rgb(68, 40, 28);
+  background: linear-gradient(to right, rgb(68, 40, 28), rgb(218, 158, 115),rgb(68, 40, 28));
+  color: black;
+  text-align: center;
+  margin: 5px;
+  width: 300px;
+  height: 70px;
+  font-size: 30px;
+  text-decoration: none;
+  border: 10px black;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px;
+  filter: drop-shadow(black);
+}
+
+
+.check-icon {
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  padding: 5rem;
+}
+
+/* Contact us page */
+
+.contact-container {
+  padding: 1rem;
+  background-color: grey;
+  display: flex;
+}
+
+.left-contact {
+  display: grid;
+  grid: flex;
+  
+}
+
+
+
+.typical-QA {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* About us page */
+
+.about {
+  background: linear-gradient(to bottom, rgb(71,71,71), rgb(128, 106, 89));
+  text-align: center;
+  padding: 1rem;
+}
+
+.about h1 {
+  font-size: 40px;
+  margin-top: 1rem;
+}
+
+.about p {
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 1rem;
+  max-width: 600px; /* Set a maximum width for the paragraph */
+  margin: auto; /* Center the paragraph horizontally */
+  padding: 1rem;
+}
+
+
+/* Play Movie Page */
+
+.movie {
+  align-items: center;
+  text-align: center;
+  width: 1000px;
+  height: 700px; 
+  background-color: black; 
+  border: 2px solid #000000;  
+  text-align: start;
+  font-size: 40px;
 }
