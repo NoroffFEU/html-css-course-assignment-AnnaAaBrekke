@@ -416,6 +416,7 @@ body {
 }
 
 .genres {
+  display: flex;
   background: linear-gradient(to bottom, rgb(102,82,67, 100%),rgb(135,81,41, 0%));
   color:#FFFFFF;
   border-radius: 4px;
@@ -531,6 +532,17 @@ body {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
+.fa-solid.fa-ellipsis.fa-2xl {
+  position: absolute;
+  background-color: grey;
+  padding: 1rem;
+  text-align: center;
+  right: 1rem;
+  top: 50%;
+  bottom: 50%;
+  border-radius: 360px;
+}
 }
 
 .price-movie {
@@ -559,12 +571,11 @@ body {
 }
 
 .fa-solid.fa-ellipsis.fa-2xl {
-  display: none;
   position: absolute;
   background-color: grey;
   padding: 1rem;
   text-align: center;
-  right: 10%;
+  right: 1rem;
   top: 50%;
   bottom: 50%;
   border-radius: 360px;
