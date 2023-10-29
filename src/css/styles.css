@@ -877,7 +877,6 @@ body {
 
 .contact {
   background: linear-gradient(to top, rgb(71,71,71), rgb(128, 106, 89)); 
-  display: flex;
 }
 
 .SeLogo-Contact {
