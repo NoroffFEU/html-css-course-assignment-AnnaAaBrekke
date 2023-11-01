@@ -887,33 +887,40 @@ body {
 /* Contact us page */
 
 .contact {
-  background: linear-gradient(to top, rgb(71,71,71), rgb(128, 106, 89)); 
+  background: linear-gradient(to bottom, rgb(71,71,71), rgb(128, 106, 89));
 }
 
-.SeLogo-Contact {
-  height: auto;
-  width: 600px;
-  position: absolute;
-  top: 0;
-  left: 33,33;
-  z-index: -1;
-  margin-top: 4rem;
-}
+.logo-contact {
+  background-color: rgb(71,71,71);
+}  
 
-
+@media (min-width: 600px) { 
+  .SeLogo-Contact {
+    height: auto;
+    max-width: 100%; 
+    position: absolute;
+    top: 0;
+    left: 33.33%;
+    z-index: -1;
+    margin-top: 4rem;
+    object-fit: fill;
+  }
+  
 .contact-container {
+  display: flex;
   padding: 3rem;
   background-color: grey;
-  width: 100%; 
-  height: auto;
   margin-top: 12rem; 
   margin-bottom: 1rem; 
-  margin-left: 1rem;
-  margin-right: 1rem;
   display: flex;
   gap: 1rem;
-  flex-direction: row;
   text-align: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: #000000;
+  justify-content: center;
 }
 
 .contact-container h1 {
@@ -922,25 +929,101 @@ body {
 }
 
 .left-contact {
-  background-color: blue;
+  border-radius: 5px solid;
+  display: grid;
+  grid: 25 25 25 25;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  box-shadow:inset;
+}
+
+.right-contact {
+  border-radius: 5px solid;
+  align-items: center;
+  padding: 1rem;
+  margin-top: -1rem;
+  box-shadow:inset;
+}
+
+}
+
+@media (max-width: 1440px) {
+
+  .SeLogo-Contact {
+    height: auto;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 33,33;
+    z-index: -1;
+    margin-top: 4rem;
+    background: rgb(71,71,71); 
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: grey;
+    gap: none; 
+    margin: 0 auto; 
+    align-items: center; 
+    border-radius: 15px;
+    box-shadow: 0 0 5px #000000;
+    max-width: 500px;
+    margin-top: 10rem;
+  }
+
+  .contact-container h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+}
+
+
+.contact input[type="text"] {
+  width: 100%; 
+  padding: 1rem; 
+  font-size: 20px; 
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  margin: 10px 0; 
+  display: flex;
+  width: 370px;
+}
+
+
+
+.left-contact {
   border-radius: 5px;
   display: grid;
   grid: 25 25 25 25;
   align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  box-shadow:inset;
 }
 
 .contact-container p {
   font-weight: 200;
-  font-size: 10px;
+  font-size: 15px;
   text-decoration: underline;
+  margin-top: -0.2rem;
 }
 
 .right-contact {
-  background-color: pink;
-  border: 0.25rem solid;
-  border-color: white;
   border-radius: 5px;
   align-items: center;
+  padding: 1rem;
+  margin-top: -1rem;
+  box-shadow:inset;
+}
+
+.text {
+  border-radius: 12px;
 }
 
 .contact-message {
@@ -949,23 +1032,32 @@ body {
   margin-top: 3px;
 }
 
-.message {
-  height: 150px;
+input[type="message"] {
+  width: 100%; 
+  padding: 1rem; 
+  font-size: 20px; 
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  margin-top: -0.5rem; 
+  height: 300px;
+  width: 370px;
+  display: flex;
 }
 
 .send {
   position: absolute;
   bottom: 0;
-  right: 0;
-  height: 15%; /* Make the button the same height as the input */
+  left: 0;
+  height: 15%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 24px;
+  background-color: #FFFFFF;
+
 }
 
 .contact-info-boxes {
   display: flex;
   align-items: center; 
-  flex: 1 1 270px;
   gap: 1rem;
   padding: 1rem;
 }
@@ -973,15 +1065,25 @@ body {
 .our-email-box,
 .our-phone-box,
 .our-adress-box {
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 10px;
   border: 2px solid black;
-  box-shadow: outside #000000;
+  box-shadow: 0 0 5px #000000;
   background-color: white;
   color: black;
-  width: 270px;
-  height: 210px;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 140px;
+}
+
+.our-email-box i,
+.our-phone-box i,
+.our-adress-box i {
+  font-size: 24px;
+  margin-bottom: 1rem;
 }
 
 .typical-QA {
