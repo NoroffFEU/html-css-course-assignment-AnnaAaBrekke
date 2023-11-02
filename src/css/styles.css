@@ -66,23 +66,59 @@ body {
   margin-right: 10px;
 }
 
-/* Media query for larger screens (e.g., desktop) */
-@media (min-width: 600px) {
-  .home {
-    height: 100%;
-    background-image: url(/assets/images/background1.jpg);
-    background-size: contain;
-    background-position: 80%;
-    backface-visibility: hidden;
-    aspect-ratio: auto 2792/1861;
-    padding: 0px;
-    margin: 0px;
-    font-size: 20px;
-    text-align: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+.home {
+  height: 100%;
+  background-image: url(/assets/images/background1.jpg);
+  background-size: contain;
+  background-position: 90% 2%;
+  backface-visibility: hidden;
+  aspect-ratio: auto 2792/1861;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column; 
 }
+
+.home img {
+height: auto;
+width: 600px;
+margin-bottom: 0;
+margin-top: 5rem;
+margin-left: 2rem;
+align-self: flex-start;
+padding: 1rem;
+filter: brightness(70%);
+padding: 1rem;
+max-width: 100%;
+z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+
+.home p {
+  margin: 1rem;
+  margin-right: 55%;
+  padding: 1rem;
+  filter: drop-shadow(black);
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+  max-width: 400px;
+}
+
+.home button {
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  margin-right: 55%;
+  font-size: 22px;
+  border-radius: 10px;
+  background-color: black;
+  color: #FFFFFF;
+  border: 5px black;
+  z-index: 1; /* Ensure the content is above the pseudo-element */
 }
 
 /* Media query for smaller screens (e.g., mobile) */
@@ -102,55 +138,45 @@ body {
     height: 100vh;
     width: 100vw;
   }
-}
 
-.home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(/assets/images/background1.jpg);
-  background-size: cover;
-  background-position: center;
-  filter: brightness(50%);
-  z-index: -1; /* Place this pseudo-element behind the content */
-}
+  .SELogoHome {
+    height: auto;
+    width: 300px;
+    margin: 10px;
+    filter: brightness(60%);
+    justify-content: center;
+    padding: 1rem;
+    max-width: 100%;
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+  }
+  
+  .home-text {
+    text-align: center;
+    margin: 10px;
+    margin-left: 2rem;
+    padding: 1rem;
+    filter: drop-shadow(black);
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+    width: 400px;
+  }
 
+  .home button {
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    margin-right: 55%;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: black;
+    color: #FFFFFF;
+    border: 5px black;
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+  }
 
-.SELogoHome {
-  height: auto;
-  width: 600px;
-  margin:10px;
-  filter: brightness(60%);
-  justify-content: center;
-  padding: 1rem;
-  max-width: 100%;
-  z-index: 1; /* Ensure the content is above the pseudo-element */
-}
-
-.home-text {
-  text-align: center;
-  margin: 10px;
-  margin-right: 50%;
-  padding: 1rem;
-  filter: drop-shadow(black);
-  z-index: 1; /* Ensure the content is above the pseudo-element */
-}
-
-.watch.online {
-  width: 160px;
-  height: 50px;
-  text-align: center;
-  margin: 30px;
-  margin-right: 50%;
-  font-size: 22px;
-  border-radius: 10px;
-  background-color: black;
-  color: #FFFFFF;
-  border: 5px black;
-  z-index: 1; /* Ensure the content is above the pseudo-element */
+  .searchfield i {
+    display: flex;
+    align-self: flex-start;
+  }
 }
 
 .steps {
@@ -203,20 +229,22 @@ body {
   max-width: 100%;
 }
 
-.latest.editions {
+.latest-editions {
   display: flex;
+  flex-direction: column;
   background-color: black;
   padding: 1rem;
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100vw;
 }
 
 .check.text {
-  display: flex;
+  margin-top: -2rem;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   filter: drop-shadow(black);
 }
 
@@ -227,9 +255,8 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-  margin-top: 40rem;
+  width: 100vw;
+  margin-top: 1rem;
 } 
 
 .halloween.text {
@@ -237,25 +264,6 @@ body {
   filter: drop-shadow(black);
   padding: 1rem;
 }
-
-/* Media query for larger screens (e.g., desktop) */
-@media (min-width: 600px) {
-  .halloween {
-    margin-top: 10rem; /* Adjust the margin for larger screens */
-    margin-bottom: 0%;
-  }
-  .discover {
-    margin-bottom: 0%;
-  }
-}
-
-/* Media query for smaller screens (e.g., mobile) */
-@media (max-width: 1440px) {
-  .halloween {
-    margin-top: 40rem; /* No margin for smaller screens to prevent overlapping */
-  }
-}
-
 
 .discover {
   font-size: 30px;
