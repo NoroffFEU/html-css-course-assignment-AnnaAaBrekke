@@ -23,6 +23,14 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
 /* Home */
 
 .bar {
@@ -1127,12 +1135,28 @@ input[type="message"] {
 /* Play Movie Page */
 
 .movie {
+  display: flex;
   align-items: center;
   text-align: center;
-  width: 1000px;
-  height: 700px; 
-  background-color: black; 
-  border: 2px solid #000000;  
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 5rem;
+  height: 400px; 
+  margin: 5rem auto;
+  background-image: url(/assets/images/OnceUponATimeInHollywood.jpeg);
+  background-position: 90% 25%;
+  object-fit: contain;
+  border: 1rem solid white;  
   text-align: start;
   font-size: 40px;
+}
+
+@media (max-width: 1440px) {
+
+  .movie i {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
