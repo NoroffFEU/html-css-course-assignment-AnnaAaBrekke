@@ -142,8 +142,6 @@ body {
   font-size: 20px;
   text-align: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column; 
 }
@@ -204,8 +202,6 @@ justify-content: center;
     font-size: 20px;
     text-align: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
   }
 
   .SELogoHome {
@@ -244,43 +240,54 @@ justify-content: center;
     z-index: 1;  
   }
 
-  .searchfield i {
-    display: flex;
-    align-self: flex-start;
-  }
-
   .steps {
-    height: 100vh;
-    width: 100vw;
     background-image: url("/assets/images/background2.jpg");
-    background-size: 120%;
-    background-position: -300px center; 
+    background-size: 100%;
+    background-position: center; 
     background-repeat: no-repeat;
     padding: 0;
     margin-left: 0;
     font-size: 20px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: ;
+  }
+
+  .steps-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 .steps {
-  height: 100vh;
-  width: 100vw;
   background-image: url("/assets/images/background2.jpg");
   background-size: cover;
-  background-position: -300px center; 
+  background-position: center; 
   background-repeat: no-repeat;
   padding: 0;
-  margin-left: 0;
+  margin: 0;
   font-size: 20px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 }
 
+.steps-container {
+  display: flex;
+  justify-content: space-around; 
+}
+
 .steps ul {
-  text-align: center;
-  margin: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15rem;
 }
 
 .Step1,
@@ -300,13 +307,23 @@ justify-content: center;
   filter: drop-shadow(black);
 }
 
+.steps-container h2 {
+  max-width: 30px;
+}
+
+.searchfield-container {
+  flex-grow: inherit;
+  align-items: center;
+  min-width: 300px;
+  max-width: 750px;
+  margin: auto;
+}
 
 .searchfield {
   background-color: #FFFFFF;
   opacity: 45%;
-  text-align: start;
   margin: 20px;
-  width: 450px;
+  width: 750px;
   height: 40px;
   border: 5px;
   border-radius: 5px;
@@ -323,6 +340,7 @@ justify-content: center;
   align-items: center;
   justify-content: center;
   width: 100vw;
+  margin-top: -3rem;
 }
 
 @media (max-width: 1440px) {
@@ -344,7 +362,9 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   filter: drop-shadow(black);
-  margin-top: 9rem;
+  margin-top: 5rem;
+  font-size: 45px;
+  margin-left: 3rem;
 }
 
 .latest.editions.images {
@@ -366,6 +386,7 @@ justify-content: center;
   padding: 5px;
   border-radius: 5px;
   flex: 0 0;
+  margin-top: -5rem;
 }
 
 .halloween {
@@ -378,8 +399,8 @@ justify-content: center;
   width: 100vw;
 } 
 
-.halloween.text {
-  font-size: 30px;
+.halloween-text {
+  font-size: 40px;
   filter: drop-shadow(black);
   padding: 1rem;
   margin-bottom: 1rem;
