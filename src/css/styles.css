@@ -43,7 +43,9 @@ body {
 }
 
 .fa-solid.fa-bars.fa-xl {
-  margin-right: 10px; 
+  position: absolute;
+  top: 2.7rem;
+  left: 0.9rem
 }  
 
 .SELogoBar {
@@ -181,6 +183,11 @@ justify-content: center;
   color: #FFFFFF;
   border: 5px black;
   z-index: 1;  
+  transition: background-color 0.3s;
+}
+
+.home button:hover {
+  background-color: rgb(23, 21, 21);
 }
 
 /* Media query for smaller screens (e.g., mobile) */
@@ -235,9 +242,6 @@ justify-content: center;
     color: #FFFFFF;
     border: 5px black;
     z-index: 1;  
-    background-color: grey;
-    color: #ffffff;
-    transition: background-color 0.3s, color 0.3s; 
   }
 
   .searchfield i {
@@ -290,11 +294,12 @@ justify-content: center;
   width: 70px;
   height: 70px;
   font-size: 40px;
-  border: 10px black;
+  border: 0.5px solid black;
   border-radius: 25%;
   box-shadow: 5px 5px 10px;
   filter: drop-shadow(black);
 }
+
 
 .searchfield {
   background-color: #FFFFFF;
@@ -353,8 +358,8 @@ justify-content: center;
 .imgBatmanHome,
 .imgHobbsHome,
 .imgSweetHome {
-  height: 300px;
-  max-width: 310px;
+  height: 400px;
+  max-width: 375x;
   object-fit: cover;
   object-position: bottom;
   margin: 10px;   
@@ -391,8 +396,8 @@ justify-content: center;
 .imgAddamsHome,
 .imgBatmanHome2,
 .imgGodzillaHome {
-  height: 300px;
-  max-width: 310px;
+  height: 350px;
+  max-width: 360px;
   object-fit: cover;
   object-position: bottom;
   padding: 5px;
@@ -477,6 +482,23 @@ justify-content: center;
   margin-left: 1rem;
   font-weight: 500;
   font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+
+.movie-container {
+  position: relative;
+  display: inline-block;
+  width: 275px;
+  height: auto;
+  object-fit: cover;
+  margin: 1rem;
+}
+
+
+.movies {
+  padding: 0;
+  margin: 0;
 }
 
 /* Media query for larger screens (e.g., desktop) */
@@ -493,6 +515,7 @@ justify-content: center;
     border: 2px solid black;
     box-shadow: outside #000000;
     background: linear-gradient(to bottom,black, rgb(128, 106, 89));
+    object-fit: cover;
   }
   
   .Action,
@@ -508,7 +531,7 @@ justify-content: center;
   .drama-movies img,
   .horror-movies img {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     min-height: 400px;
     max-width: 100%;
     width: 275px;
@@ -519,9 +542,18 @@ justify-content: center;
     cursor: pointer;
     transition: all 0.4 ease-in;
     background: var(--secondary-color);
+    border: 5px solid rgb(0, 0, 0, 0.16);
     border-radius: 6px;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+
+  .action-movies img:hover,
+  .comedy-movies img:hover,
+  .drama-movies img:hover,
+  .horror-movies img:hover {
+    background-color: rgb(7, 4, 20);
   }
   
   .fa-solid.fa-ellipsis.fa-2xl {
@@ -550,6 +582,7 @@ justify-content: center;
   border: 2px solid black;
   box-shadow: outside #000000;
   background: linear-gradient(to bottom,black, rgb(128, 106, 89));
+  object-fit: cover;
 }
 
 .Action,
@@ -587,8 +620,8 @@ justify-content: center;
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -2.5rem;
-  right: 1rem;
+  bottom: -3rem;
+  right: 0.2rem;
   gap: 0.5rem;
   cursor: pointer;
 } 
@@ -601,21 +634,27 @@ justify-content: center;
   font-weight: 500;
 }
 
-.movie-container {
-  position: relative;
-  display: inline-block;
-  margin: 0 1rem;
-}
-
 .fa-solid.fa-ellipsis.fa-2xl {
   position: absolute;
   background-color: grey;
   padding: 1rem;
   text-align: center;
-  right: 1rem;
+  right: 1.5rem;
   top: 50%;
   bottom: 50%;
   border-radius: 360px;
+  transition: background-color 0.3s; 
+}
+
+.fa-solid.fa-ellipsis.fa-2xl:hover {
+  background-color: black; 
+}
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 1440px) {
+.fa-solid.fa-ellipsis.fa-2xl {
+
+}
 }
 
 /* Movie Page */
@@ -628,16 +667,35 @@ justify-content: center;
   padding: 1rem;
 }
 
-.trailer {
+
+/* Media query for larger screens (e.g., desktop) */
+@media (min-width: 600px) {
+  .trailer {
+    position: absolute;
+    top: 4rem;
+  }
+}
+  
+.trailer button {
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  width: 100px;
-  height: 50px;
-  color: white;
-  background-color: #000000;s
+  width: 90px;
+  height: 30px;
+  color: black;
+  background-color: white;
+  opacity: 60%;
+  border-radius: 12px;
+  border: 3px solid black;
+  font-weight: bold;
 }
+
+.trailer {
+  position: absolute;
+  bottom: 4.2rem;
+  right: 0.8rem;
+}
+
 
 
 /* Media query for larger screens (e.g., desktop) */
@@ -658,11 +716,11 @@ justify-content: center;
   }
 
   @media (min-width: 600px) {
-    .movie-page img {
+    .movie-page-cover img {
       filter: opacity(30%);
       height: 500px;
       width: 1440px;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
@@ -684,7 +742,7 @@ justify-content: center;
     padding: 1rem;
   }
 
-  .movie-page img {
+  .movie-page-cover img {
     filter: opacity(30%);
     height: 500px;
     width: 100%;
@@ -697,7 +755,13 @@ justify-content: center;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  padding: 1.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+}
+
+.age {
+  border: solid black;
+  margin-right: 2rem;
 }
 
 .price {
@@ -706,22 +770,26 @@ justify-content: center;
   padding: 0; 
   font-size: 22px;
   border-radius: 10px;
-  background-color: darkolivegreen;
+  background-color: rgb(21,15,11);
   color: #FFFFFF;
   border: 5px black;
   display: flex;
   justify-content: center; 
   align-items: center;
+  margin: 1rem;
+  box-shadow: 5px solid;
 } 
 
 .about-this {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 24px;
+  margin: 1rem;
 }
 
 .info-movie {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 16px;
+  margin: 1rem;
 }
 
 .quentin,
@@ -732,10 +800,20 @@ justify-content: center;
 }
 
 .you-might {
-  position: relative;
-  z-index: 1;
   display: flex;
-  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.you-might h3 {
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.you-might-movie-container {
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
   padding: 1rem;
 }
@@ -743,10 +821,24 @@ justify-content: center;
 .imgBatmanHomeMoviePage,
 .imgHobbsHomeMoviePage,
 .imgSweetHomeMoviePage {
-  height: 200px;
-  max-width: 310px;
-  margin: 0.25rem;   
-  border-radius: 5px;
+  max-width: 100%;
+  width: 275px;
+  height: 425px;
+  object-fit: cover;
+  justify-content: center;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.16);
+  cursor: pointer;
+  border: 5px solid rgb(0, 0, 0, 0.16);
+  border-radius: 6px;
+  margin: 1rem;
+  margin-top: 0;
+  transition: background-color 0.3s;
+}
+
+.imgBatmanHomeMoviePage:hover,
+.imgHobbsHomeMoviePage:hover,
+.imgSweetHomeMoviePage:hover {
+  background-color: rgb(7, 4, 20);
 }
 
 
@@ -826,6 +918,11 @@ justify-content: center;
     margin-left: 1rem;
   }
 
+  .once-cart {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
   .cart p {
     font-weight: 200;
     font-size: 16px;
@@ -836,6 +933,7 @@ justify-content: center;
     text-decoration: underline;
     text-align: end;
     margin-right: 1rem;
+    padding: 1rem;
   }
 
 
