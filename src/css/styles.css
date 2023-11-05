@@ -141,7 +141,7 @@ body {
 
 /* Home */
 .home {
-  background-image: url(/assets/images/background1.jpeg);
+  background-image: url(assets/images/background1.jpeg);
   background-size: cover;
   background-position: center;
   aspect-ratio: auto 2792/1861;
@@ -204,7 +204,7 @@ justify-content: center;
 /* Media query for larger screens (e.g., desktop) */
 @media (min-width: 1400px) {
 .home {
-  background-image: url(/assets/images/background1.jpeg);
+  background-image: url(assets/images/background1.jpeg);
   background-size: cover;
   background-position: center;
   aspect-ratio: auto 2792/1861;
@@ -255,7 +255,7 @@ justify-content: center;
   @media (max-width: 600px) {
   .home {
     height: 100%;
-    background-image: url(/assets/images/background1.jpeg);
+    background-image: url(assets/images/background1.jpeg);
     background-size: cover;
     background-position: 30%;
     backface-visibility: hidden;
@@ -335,7 +335,8 @@ justify-content: center;
 }
 
 .steps {
-  background-image: url("/assets/images/background2.jpeg");
+  background-image: url(assets/images/background2.jpeg"
+  );
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
@@ -355,7 +356,7 @@ justify-content: space-around;
 /* Media query for larger screens (e.g., desktop) */
 @media (min-width: 600px) {
   .steps {
-    background-image: url("/assets/images/background2.jpeg");
+    background-image: url(assets/images/background2.jpeg);
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -404,7 +405,7 @@ justify-content: space-around;
 /* Media query for smaller screens (e.g., mobile) */
 @media (max-width: 600px) {
   .steps {
-    background-image: url("/assets/images/background2.jpeg");
+    background-image: url(assets/images/background2.jpeg);
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -701,7 +702,7 @@ justify-content: space-around;
 
 /* List of movies */
 .top-section-list {
-  background-image: url(/assets/images/search_background.jpeg);
+  background-image: url(assets/images/search_background.jpeg);
   background-size: cover;
   background-position: 100% 55%;
   color: #000000;
@@ -1761,7 +1762,7 @@ input[type="message"] {
   padding: 5rem;
   height: 400px; 
   margin: 5rem auto;
-  background-image: url(/assets/images/OnceUponATimeInHollywood.jpeg);
+  background-image: url(assets/images/OnceUponATimeInHollywood.jpeg);
   object-fit: cover;
   border: 1rem solid white;  
   text-align: start;
