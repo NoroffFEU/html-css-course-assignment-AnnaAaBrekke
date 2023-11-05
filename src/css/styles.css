@@ -708,6 +708,7 @@ justify-content: space-around;
   background-size: cover;
   background-position: 100% 55%;
   color: #000000;
+  background-color: grey;
   backface-visibility: hidden;
   height: 250px;
   padding: 1rem;
