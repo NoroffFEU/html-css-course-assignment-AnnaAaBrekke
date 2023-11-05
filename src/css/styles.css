@@ -51,8 +51,8 @@ body {
 
 .fa-solid.fa-bars.fa-xl {
   position: absolute;
-  top: 2.8rem;
-  left: 0.9rem
+  top: 2.7rem;
+  left: 1rem
 }  
 
 .SELogoBar {
@@ -69,9 +69,12 @@ body {
 }
 
 .fa-solid.fa-film.fa-xl,
-.fa-regular.fa-user.fa-xl, 
-.fa-solid.fa-cart-shopping.fa-xl {
+.fa-regular.fa-user.fa-xl {
   margin-right: 10px;
+}
+
+.fa-solid.fa-cart-shopping.fa-xl {
+  margin-right: 1.5rem;
 }
 
 /* Footer */
