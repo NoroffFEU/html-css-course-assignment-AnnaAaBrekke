@@ -172,7 +172,7 @@ margin-left: 3rem;
 justify-content: center;
 }
 
-.home p {
+.home h1 {
   margin-left: 1rem;
   margin-right: 45%;
   padding: 1rem;
@@ -706,7 +706,7 @@ justify-content: space-around;
 .top-section-list {
   background-image: url(/assets/images/search_background.jpg);
   background-size: cover;
-  background-position: 100% 50%;
+  background-position: 100% 55%;
   color: #000000;
   backface-visibility: hidden;
   height: 250px;
@@ -714,23 +714,27 @@ justify-content: space-around;
 }
 
 .top-section-list h1 {
-  font-size: 50px;
-  margin-left: 1rem;
+  font-size: 70px;
+  margin-left: 2rem;
   margin-bottom: 0;
   margin-top: 0;
-  filter: drop-shadow(black);
   backface-visibility: hidden;
   text-transform: uppercase;
   font-weight: 900;
+  color: #000000;
+  text-shadow: 30px 30px 70px rgba(255, 255, 255); 
+  -webkit-text-stroke: 2px #000; 
 }
 
 .top-section-list h2 {
-  font-size: 25px;
+  font-size: 30px;
   font-style: italic;
-  margin-left: 1rem;
-  margin-top: 0;  
-  filter: drop-shadow(black);
+  font-weight: 800;
+  margin-left: 2rem;
+  margin-top: -0.5rem;  
   backface-visibility: hidden;
+  color: #000000;
+  text-shadow: 20px 20px 70px rgba(255, 255, 255); 
 }
 
 .searchfield2 {
@@ -744,7 +748,7 @@ justify-content: space-around;
   font-size: 20px;
   max-width: 100%; 
   z-index: -1;
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-bottom: 0.2rem;
 }
 
@@ -910,7 +914,7 @@ justify-content: space-around;
   margin: 0;
 }
 
-.price-movie p {
+.price-movie h {
   font-weight: 500;
 }
 
@@ -1299,7 +1303,6 @@ justify-content: space-around;
   }
 
   .remove {
-    text-decoration: underline;
     text-align: end;
     bottom: 0;
     margin-top: -1.7rem;
@@ -1607,10 +1610,10 @@ justify-content: space-around;
 }
 
 .contact-container p {
-  font-weight: 200;
-  font-size: 15px;
-  text-decoration: underline;
-  margin-top: -0.2rem;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 0.5rem;
+  color: black;
 }
 
 .right-contact {
