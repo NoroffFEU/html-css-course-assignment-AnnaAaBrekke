@@ -44,21 +44,28 @@ body {
   width: 100%;
 }
 
+.film-icon,
+.user-icon {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 5px;
+}
+
+.cart-icon {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 5px;
+  margin-right: 2rem;
+}
+
 .left.bar ul{
   display: flex; 
   align-items: center;
 }
 
-.fa-solid.fa-bars.fa-xl {
-  position: absolute;
-  top: 2.7rem;
-  left: 1rem
-}  
-
 .SELogoBar {
   height: 40px;
   width: 70px;
-  margin-left: 10px;
   filter: brightness(15%);
   max-width: 100%;
 }
@@ -71,10 +78,12 @@ body {
 .fa-solid.fa-film.fa-xl,
 .fa-regular.fa-user.fa-xl {
   margin-right: 10px;
+  color: #ffffff
 }
 
 .fa-solid.fa-cart-shopping.fa-xl {
   margin-right: 1.5rem;
+  color: #ffffff
 }
 
 /* Footer */
@@ -103,26 +112,23 @@ body {
   margin-left: 10px;
 }
 
-.footer.icons {
+.social.icons {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
 
-.fa-brands.fa-tiktok.fa-lg {
-  margin-right: 5px;
+.social-icons a {
+  margin-right: 0.5rem
 }
 
-.fa-brands.fa-square-instagram.fa-lg {
-  margin-right: 5px;
-}
-
-.fa-brands.fa-twitter.fa-lg {
-  margin-right: 5px;
+.social-icon {
+  color: #ffffff;
+  font-size: x-large;
 }
 
 .copyright {
-  font-size: xx-small;
+  font-size: small;
   margin-left: 50px;
 }
 
@@ -170,8 +176,9 @@ justify-content: center;
 }
 
 .home h1 {
-  margin-left: 1rem;
-  margin-right: 45%;
+  display: flex;
+  justify-content: center;
+  margin-right: 10rem; 
   padding: 1rem;
   filter: drop-shadow(black);
   z-index: 1;  
@@ -186,13 +193,13 @@ justify-content: center;
   width: 210px;
   height: 55px;
   text-align: center;
-  margin-right: 40rem;
+  margin-right: 10rem; 
   margin-bottom: 1rem;
   font-size: 30px;
   border-radius: 10px;
   background-color: black;
   color: #FFFFFF;
-  border: 5px solid black;
+  border: 5px solid white;
   z-index: 1;  
   transition: background-color 0.3s;
 }
@@ -243,7 +250,7 @@ justify-content: center;
 }
 
 .watch-online {
-  display: flex;
+  margin-right: 38rem;
 }
 
 .watch-online:hover {
@@ -701,11 +708,11 @@ justify-content: space-around;
 
 /* List of movies */
 .top-section-list {
-  background-image: url(assets/images/search_background.jpeg);
+  background-image: url("assets/images/search_background.jpeg");
   background-size: cover;
   background-position: 100% 55%;
   color: #000000;
-  background-color: grey;
+  background-color:rgb(147, 142, 139);
   backface-visibility: hidden;
   height: 250px;
   padding: 1rem;
@@ -1153,7 +1160,6 @@ justify-content: space-around;
   border: 5px solid rgb(0, 0, 0, 0.16);
   border-radius: 6px;
   margin: 1rem;
-  margin-top: 0;
   transition: background-color 0.3s;
 }
 
