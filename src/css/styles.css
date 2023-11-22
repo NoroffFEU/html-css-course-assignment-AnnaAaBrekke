@@ -47,15 +47,14 @@ body {
 .film-icon,
 .user-icon {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 5px;
 }
 
 .cart-icon {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 5px;
-  margin-right: 2rem;
 }
 
 .left.bar ul{
@@ -71,20 +70,65 @@ body {
   margin-right: 1rem;
 }
 
-.right.bar ul {
+.right-bar-dropdown a {
+  text-decoration: none;
+  color:#000000;
+  font-weight: 500;
+}
+
+.right-bar-dropdown button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-right: 2.5rem;
+}
+
+.right-bar-dropdown button:hover {
+  color: grey;
+}
+
+.menu-items {
+  position: relative;
+}
+
+.menu-items ul {
+  background: grey;
+  position: absolute;
+  right: 2rem;
+  margin: auto;
+  list-style: none;
+  margin-top: 2rem;
+  width: 130px;
+  height: 120px;
   display: flex;
+  align-items: inline;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.menu-items li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: inline;
   align-items: center;
 }
 
-.fa-solid.fa-film.fa-xl,
-.fa-regular.fa-user.fa-xl {
-  margin-right: 10px;
-  color: #ffffff
+.menu-items li:hover {
+  background-color: rgb(156, 151, 143);
+  border-radius: 10px;
 }
 
-.fa-solid.fa-cart-shopping.fa-xl {
-  margin-right: 1.5rem;
-  color: #ffffff
+.right-bar-dropdown button:focus {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
 }
 
 /* Footer */
